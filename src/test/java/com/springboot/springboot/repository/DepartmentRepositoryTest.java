@@ -2,6 +2,7 @@ package com.springboot.springboot.repository;
 
 import com.springboot.springboot.entity.Department;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -22,15 +23,16 @@ class DepartmentRepositoryTest {
     void setUp() {
         Department department =
                 Department.builder()
-                        .departmentName("Electronics")
-                        .departmentCode("ELE")
-                        .departmentAddress("Ktm")
+                        .departmentName("Ram")
+                        .departmentCode("NICE")
+                        .departmentAddress("Cool")
                         .build();
         entityManager.persist(department);
     }
     @Test
+    @Disabled
     public void whenFindById_thenReturnDepartment(){
         Department department = departmentRepository.findById(1L).get();
-        assertEquals(department.getDepartmentName(),"Electronics");
+        assertEquals(department.getDepartmentName(),"Ram");
     }
 }

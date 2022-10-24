@@ -1,7 +1,6 @@
 package com.springboot.springboot.controller;
 
 import com.springboot.springboot.entity.Department;
-import com.springboot.springboot.error.DepartmentNotFound;
 import com.springboot.springboot.service.DepartmentService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +13,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 
 @WebMvcTest(DepartmentController.class)
