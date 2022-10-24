@@ -30,7 +30,7 @@ class DepartmentRepositoryTest {
     }
     @Test
     public void whenFindById_thenReturnDepartment(){
-        Department department = departmentRepository.findById(5L).get();
+        Department department = departmentRepository.findById(1L).get();
         assertEquals(department.getDepartmentName(),"Electronics");
     }
 }
